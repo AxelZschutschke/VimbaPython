@@ -52,10 +52,10 @@ class RuntimeTypeCheckEnable:
     def __call__(self, func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            full_args, hints = self.__dismantle_sig(func, *args, **kwargs)
+            #full_args, hints = self.__dismantle_sig(func, *args, **kwargs)
 
-            for arg_name in hints:
-                self.__verify_arg(func, hints[arg_name], (arg_name, full_args[arg_name]))
+            #for arg_name in hints:
+            #    self.__verify_arg(func, hints[arg_name], (arg_name, full_args[arg_name]))
 
             return func(*args, **kwargs)
 
